@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: #19191c;
+  padding: 1.5vh 3vw;
+}
+
+.menu {
+  display: none;
+}
+
+body.change .menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: xx-large;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+body.change .menu a {
+  color: white;
+  text-decoration: none;
+}
+
+body.change .menu a:hover {
+  color: yellow;
+}
+
+.navbar-burger {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  top: 90vh;
+  right: 5vw;
+  background-color: lightgrey;
+  padding: 1vh;
+  border-radius: 50%;
+}
+
+.bar-1, .bar-2, .bar-3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;  
+}
+
+.change .bar-1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar-2 {opacity: 0;}
+
+.change .bar-3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #19191c;
+    padding: 1.5vh 3vw;
+  }  
+  
+  .menu {
+    min-width: 400px;
+    display: flex;
+    flex: 0 0 40vw;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    margin: 0 2vw;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu a:hover {
+    color: yellow;
+  }
+  
+  .navbar-burger {
+    display: none;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  
+}
