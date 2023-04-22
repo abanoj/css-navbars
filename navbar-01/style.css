@@ -23,33 +23,35 @@ button {
   padding: 1.5vh 3vw;
 }
 
-.menu {
+.menu, .menu-2 aside {
   display: none;
 }
 
-body.change .menu {
+body.active .menu-2 aside {
   position: fixed;
+  width: 100%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  justify-content: space-evenly;
   height: 100vh;
-  width: 100vw;
-  font-size: xx-large;
   background-color: rgba(0, 0, 0, 0.8);
 }
-body.change .menu a {
+
+body.active .menu-2 a {
   display: block;
   width: inherit;
-  color: white;
   text-decoration: none;
-  padding: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
 }
 
-body.change .menu a:hover {
+body.active .menu-2 a:hover {
   color: yellow;
-  background-color: lightslategray;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-burger {
@@ -73,15 +75,15 @@ body.change .menu a:hover {
   transition: 0.4s;
 }
 
-.change .bar-1 {
+body.active .bar-1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
 
-.change .bar-2 {
+body.active .bar-2 {
   opacity: 0;
 }
 
-.change .bar-3 {
+body.active .bar-3 {
   transform: translate(0, -11px) rotate(45deg);
 }
 
@@ -106,6 +108,10 @@ body.change .menu a:hover {
     justify-content: space-between;
     background: #19191c;
     padding: 1.5vh 3vw;
+  }
+
+  .menu-2 {
+    display: none;
   }
 
   .menu {
